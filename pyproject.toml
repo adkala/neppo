@@ -1,0 +1,39 @@
+[project]
+name = "neppo"
+version = "1.0.0"
+description = "NePPO: Near-Potential Policy Optimization for general-sum MARL (arXiv:2603.06977)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    # jaxtrl is not on PyPI; pinned to the commit the paper code was run against
+    "jaxtrl @ git+https://github.com/adkala/jaxtrl@03ca19bd5f199b7c626924049354f0b5053d3bed",
+    "jax>=0.4.30",
+    "jaxmarl>=0.1.0",
+    "torch>=2.0.0",
+    "torchrl>=0.4.0",
+    "tensordict>=0.4.0",
+    "flax>=0.8.0",
+    "gymnasium>=0.29.1",
+    "numpy>=1.26.0",
+    "jaxtyping",
+    "wandb",
+    "tensorboard>=2.13.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["matrix_game_env", "mpe_env"]
+
+[tool.setuptools.packages.find]
+include = ["marl*"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2603.06977"
+RL-library = "https://github.com/adkala/jaxtrl"
+
+[project.optional-dependencies]
+plots = ["matplotlib"]
