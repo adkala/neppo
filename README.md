@@ -1,7 +1,8 @@
 # NePPO: Near-Potential Policy Optimization
 
 Code for **"NePPO: Near-Potential Policy Optimization for General-Sum Multi-Agent
-Reinforcement Learning"** ([arXiv:2603.06977](https://arxiv.org/abs/2603.06977)).
+Reinforcement Learning"** ([arXiv:2603.06977](https://arxiv.org/abs/2603.06977),
+[project page](https://www.addikala.com/neppo/)).
 
 NePPO learns a player-independent potential function Φ such that a Nash equilibrium of the
 cooperative game with Φ as the common utility is an approximate Nash equilibrium of the
